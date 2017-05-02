@@ -1,7 +1,7 @@
-package com.aziz.rms.controller;
+package com.bootcamp.rms.controller;
 
-import com.aziz.rms.domain.History;
-import com.aziz.rms.repo.HistoryRepository;
+import com.bootcamp.rms.domain.History;
+import com.bootcamp.rms.repo.HistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -40,7 +40,7 @@ public class HistoryController {
         return history;
     }
 
-    @RequestMapping(path = "/search/employeeId/{id}", method = RequestMethod.GET)
+    @RequestMapping(path = "/search/employeeId/{employeeId}", method = RequestMethod.GET)
     public List<History> findHistoryByEmployeeId(@PathVariable String employeeId){
         return historyRepository.findByEmployeeId(employeeId);
     }
