@@ -1,0 +1,14 @@
+dist: trusty
+sudo: required
+language: java
+jdk:
+ - oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: xchLjB9PKeJtcUSIQ32kPlVSu4ctrXx9f+CRgKw9HP+BPNJn+YQZ/WAwy2eOEVIwL9vam4Kuiwmz52X/51V8RM39jszTDksxm6zYYWRL22RYYo4jvDSdVzHZ3gFb38qG+fBQjvRYegMqplDXjmdV1QoyET1DJDsyMfvVpOcoRiB8AUvNZ6sUNJAd+yHdfnynL9EU3O72Qlq7tGSO5YeY0/WF1chc/TUipaTD3xhfr3u8HvqA1rpFnpmZzujFO6UUqswkPshX8x9HB2yda72uaM67Izq+PaSwuUi0kOM7y0a1V1oWVc56tvkSZsCFEbj1tlwVdlSRk6r9eWTwyGYHCfz5rD/ADpuUII5oQ5Sra9z2za9QIRpR0nqOV6inIda2Ix9HIkJiClHOOWkcC15zYwtPQDx88JZDqbTaMth1Teo57E4og4j43Y95+Gy1B5ezxCQMpr8XW+qKOG1GOilX75K+Qbe+t5lb9WD15+4pzhOVilRWeOhFB5e+h3WlirSongIuRw4HVBqrI7eb+zgW4nX/clFHdKb536zX9OkgQAWSWQLUy+5eaGBEwTB8s+8XA5g+Xtbdgznqj1kEXqN5U2F7zG35UkwTmIV+fYYHMV/8oaQwqpOmmA4+VMo9n673l3/7ohw3F2HRmgZBc44JIRUQhQgagvXDgg+9HO6Yyaw=
+  app:
+    master: rmsapp-backend
+branches:
+  only:
+  - master
